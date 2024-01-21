@@ -21,6 +21,13 @@ contract DataLocations {
         mapping(uint => address) storage _map,
         MyStruct storage _myStruct
         )internal{
+    }
 
+    function g(uint[] memory _arr) public returns (uint[] memory) {
+        // do something with memory array
+    }
+    
+    function h(uint[] calldata _arr) external {
+        // do something with calldata array
     }
 }
