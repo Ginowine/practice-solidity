@@ -28,5 +28,4 @@ contract Payable {
         (bool success, ) = _to.call{value: _amount}("");
         require(success, "Transfer failed");
     }
-
 }

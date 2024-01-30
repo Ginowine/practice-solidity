@@ -5,7 +5,8 @@ contract Functions {
 
     uint[] public arr;
 
-    function returnMultipleValues () public pure returns(uint, bool, uint){
+    function returnMultipleValues () public pure returns(uint, bool, uint)
+    {
         return(1, true, 2);
     }
 
