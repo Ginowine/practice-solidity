@@ -20,4 +20,12 @@ contract SendAndReceiveEth {
         (bool sent, bytes memory data) = _to.call{value: msg.value}("");
         require(sent, "Failed to send message");
     }
+
+    fallback() external payable{}
+    receive() external payable{}
+
+    function getBalance() public view returns(uint256 _amount){
+        return address(this).balance;
+
+    }
 }
