@@ -26,6 +26,5 @@ contract SendAndReceiveEth {
 
     function getBalance() public view returns(uint256 _amount){
         return address(this).balance;
-
     }
 }
