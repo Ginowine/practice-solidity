@@ -3,7 +3,13 @@ pragma solidity 0.8.19;
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 
 contract GToken is ERC20 {
+
+    // declare the initialSupply
+    uint256 constant initialSupply = 1000000 * (10 ** uint256(decimals()));
+
     constructor() ERC20("GToken", "GT"){
-        _mint(msg.sender, 1000000 * (10 ** uint256(decimals())));
+        // call the mint function from ERC20 contract and
+        // pass the address and initial supply
+        _mint(msg.sender, initialSupply);
     }
 }
